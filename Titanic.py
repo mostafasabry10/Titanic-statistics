@@ -8,7 +8,7 @@ st.set_page_config(layout="wide", page_title = 'Simple DashBoard')
 html_title = """<h1 style="color:red;text-align:center;"> Titanic statistics and plots </h1>"""
 st.markdown(html_title,unsafe_allow_html=True)
 
-df = pd.read_csv('Titanic-Dataset.csv')
+df = pd.read_csv('Titanic-Dataset.csv',index_col=0)
 df.info()
 df.describe()
 df.describe(include = 'object')
