@@ -3,12 +3,14 @@ import numpy as np
 import pandas as pd 
 import plotly.express as px 
 import streamlit as st
+import os 
+os.chdir(r'C:\Users\mostafa\the new project)
 st.set_page_config(layout="wide", page_title = 'Simple DashBoard')
 
 html_title = """<h1 style="color:red;text-align:center;"> Titanic statistics and plots </h1>"""
 st.markdown(html_title,unsafe_allow_html=True)
 
-df = pd.read_csv(r'G:\Mostafa 2\engineering\coursera and ITI\Data Science epsilon AI\All Sessions\session 24\Titanic-Dataset.csv',index_col = 0)
+df = pd.read_csv(r'C:\Users\mostafa\the new project\Titanic-Dataset.csv',index_col = 0)
 df.info()
 df.describe()
 df.describe(include = 'object')
